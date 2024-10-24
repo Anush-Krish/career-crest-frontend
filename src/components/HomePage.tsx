@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
             try {
                 setLoading(true);
                 //todo will set later after backend setup
-                const response = await fetch("");
+                const response = await fetch("http://localhost:8080/api/career-crest/v1/info");
                 if (!response.ok) {
                     throw new Error("Error fetching information.")
                 }
