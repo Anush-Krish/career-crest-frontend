@@ -1,9 +1,11 @@
 import * as React from "react";
 import {useEffect, useState} from "react";
+import HomePageStyle from "./HomePageStyle.ts";
 
 interface InfoApiResponse {
     intro: string;
     about: string;
+    topSkills:string[];
 }
 
 const HomePage: React.FC = () => {
@@ -42,9 +44,15 @@ const HomePage: React.FC = () => {
 
 
     return (
-        <div>
-            <h1>{!data ? null : data.intro}</h1>
-            <p> {data?.about}</p>
+        <div style={HomePageStyle.container}>
+            <h1 style={HomePageStyle.intro}>{!data ? null : data.intro}</h1>
+            <p style={HomePageStyle.about}> {data?.about}</p>
+            <div style={HomePageStyle.skillsContainer}>
+                <h3 style={HomePageStyle.skillHeading}>Top Skills:</h3>
+                <p style={HomePageStyle.skillList}>
+                    {data?.topSkills?.join(', ')}
+                </p>
+            </div>
         </div>
     )
 };
