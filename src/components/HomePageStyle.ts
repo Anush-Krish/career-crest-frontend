@@ -12,6 +12,10 @@ const styles = {
         padding: '1.5rem',
         color: '#333',
     },
+    title: {
+        fontSize: '2rem',
+        color: '#333'
+    },
     about: {
         fontSize: '1.5rem',
         color: '#666',

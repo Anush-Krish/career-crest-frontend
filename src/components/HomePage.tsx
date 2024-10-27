@@ -17,7 +17,6 @@ const HomePage: React.FC = () => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                //todo will set later after backend setup
                 const response = await fetch("http://localhost:8080/api/career-crest/v1/info");
                 if (!response.ok) {
                     throw new Error("Error fetching information.")
@@ -46,6 +45,7 @@ const HomePage: React.FC = () => {
     return (
         <div style={HomePageStyle.container}>
             <h1 style={HomePageStyle.intro}>{!data ? null : data.intro}</h1>
+            <span style={HomePageStyle.title}>Full Stack Developer</span>
             <p style={HomePageStyle.about}> {data?.about}</p>
             <div style={HomePageStyle.skillsContainer}>
                 <h3 style={HomePageStyle.skillHeading}>Top Skills:</h3>
