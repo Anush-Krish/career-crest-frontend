@@ -1,11 +1,11 @@
 import * as React from "react";
 import {useEffect, useState} from "react";
-import HomePageStyle from "./HomePageStyle.ts";
 
 interface InfoApiResponse {
     intro: string;
     about: string;
-    topSkills:string[];
+    title: string;
+    topSkills: string[];
 }
 
 const HomePage: React.FC = () => {
@@ -43,16 +43,29 @@ const HomePage: React.FC = () => {
 
 
     return (
-        <div style={HomePageStyle.container}>
-            <h1 style={HomePageStyle.intro}>{!data ? null : data.intro}</h1>
-            <span style={HomePageStyle.title}>Full Stack Developer</span>
-            <p style={HomePageStyle.about}> {data?.about}</p>
-            <div style={HomePageStyle.skillsContainer}>
-                <h3 style={HomePageStyle.skillHeading}>Top Skills:</h3>
-                <p style={HomePageStyle.skillList}>
-                    {data?.topSkills?.join(', ')}
-                </p>
+        <div className="border-b border-neutral-900 pb-4 lg:mb35">
+            <div className="flex flex-wrap">
+                <div className="w-full lg:w-1/2">
+                    <div className="flex flex-col items-center lg:items-start">
+                        <h1 className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">
+                            {data?.intro && (
+                                <>
+                                    <span className="block lg:text-start text-center">{data.intro.split(' ')[0]}</span> {/* First word */}
+                                    <span className="lg:pl-32">{data.intro.split(' ').slice(1).join(' ')}</span> {/* Remaining words */}
+                                </>
+                            )}
+                        </h1>
+                        <span className="bg-clip-text text-4xl
+                        tracking-tight items-start">{data?.title}</span>
+                        <p className="my-2 max-w-xl py-6 font-light tracking-tight"> {data?.about}</p>
+                        <div className="flex items-center">
+                            <h3 className="font-semibold text-white mr-2 ">Top Skills:{data?.topSkills?.join(', ')}</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
         </div>
     )
 };
