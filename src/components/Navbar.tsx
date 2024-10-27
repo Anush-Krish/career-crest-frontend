@@ -4,6 +4,7 @@ import {FaLinkedin} from "react-icons/fa"
 import {FaGithub} from "react-icons/fa"
 import {FaInstagram} from "react-icons/fa"
 import {FaPhone} from "react-icons/fa"
+import {FaEnvelope} from "react-icons/fa"
 
 
 const Navbar: React.FC = () => {
@@ -16,6 +17,7 @@ const Navbar: React.FC = () => {
             <FaGithub/>
             <FaLinkedin/>
             <FaInstagram/>
+            <FaEnvelope/>
 
         </div>
     </nav>
