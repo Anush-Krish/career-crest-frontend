@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import * as React from "react";
+//import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import HomePage from "./components/HomePage.tsx";
+import Navbar from "./components/Navbar.tsx";
+import ContractPage from "./components/ContractPage.tsx";
+//import TechnologyPage from "./components/TechnologyPage.tsx";
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )//
+const App: React.FC = () => {
+    return (
+        <div
+            className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900 ">
+            <div className="fixed top-0 -z-10 h-full w-full">
+            <div
+                className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 bg-gradient-to-r from-black via-black to-gray-800"></div>
+            </div>
+            <div className="container mx-auto px-8">
+                <Navbar/>
+                <HomePage/>
+                <ContractPage/>
+                {/*<TechnologyPage/>*/}
+            </div>
+
+        </div>
+    )
 }
+export default App;
 
-export default App
+
+
+
+
