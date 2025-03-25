@@ -16,7 +16,7 @@ const hardcodedData: InfoApiResponse = {
         " of existing systems. Alongside my backend expertise, I have hands-on knowledge of frontend " +
         "development, enabling me to contribute effectively to full-stack project success.",
     title: "Full Stack Developer",
-    topSkills: ["Spring boot", "Apache Kafka", "PostgresSql", "Hibernate", "Redis", "React", "TypeScript"],
+    topSkills: ["Spring boot", "Redis", "Apache Kafka", "PostgresSql", "Hibernate", "React", "TypeScript", "Git"],
     experience: {
         company: "Pogoso Pvt. Ltd.",
         role: "Backend Developer Intern",
@@ -37,7 +37,7 @@ const hardcodedData: InfoApiResponse = {
             "Implemented Spring batch from scratch for deleting all user-related data by scheduling jobs."
         ]
     },
-    education: "KIIT UNIVERSITY — BTECH, CSE\n\n\n\nSEPTEMBER 2022 - JULY 2026, Bhubaneswar"
+    education: "KIIT UNIVERSITY — BTECH, CSE\nSEPTEMBER 2022 - JULY 2026, Bhubaneswar"
 };
 
 const HomePage: React.FC = () => {
@@ -61,7 +61,7 @@ const HomePage: React.FC = () => {
                                 Top Skills: {hardcodedData.topSkills.join(', ')}
                             </h3>
                         </div>
-                        <div className="mt-6">
+                        <div className="mt-2">
                             <h3 className="text-xl font-semibold">Education</h3>
                             <p className="mt-2 font-light whitespace-pre-line text-gray-500">{hardcodedData.education}</p>
                         </div>
