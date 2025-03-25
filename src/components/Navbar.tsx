@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
                 <img className="mx-2 w-10" src={logo} alt="logo" />
             </div>
             <div className="m-8 flex items-center justify-center gap-4 text-2xl text-white">
-                <a href="tel:+1234567890" className="hover:text-gray-400">
+                <a href="tel:+919234589055" className="hover:text-gray-400">
                     <FaPhone />
                 </a>
                 <a href="https://github.com/Anush-Krish" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
