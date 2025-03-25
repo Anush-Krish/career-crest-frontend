@@ -3,7 +3,7 @@ import * as React from "react";
 import HomePage from "./components/HomePage.tsx";
 import Navbar from "./components/Navbar.tsx";
 import ContractPage from "./components/ContractPage.tsx";
-import TechnologyPage from "./components/TechnologyPage.tsx";
+//import TechnologyPage from "./components/TechnologyPage.tsx";
 
 
 const App: React.FC = () => {
@@ -18,7 +18,7 @@ const App: React.FC = () => {
                 <Navbar/>
                 <HomePage/>
                 <ContractPage/>
-                <TechnologyPage/>
+                {/*<TechnologyPage/>*/}
             </div>
 
         </div>
