@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
                         tracking-tight items-start">{data?.title}</span>
                         <p className="my-2 max-w-xl py-6 font-light tracking-tight"> {data?.about}</p>
                         <div className="flex items-center">
-                            <h3 className="font-semibold text-white mr-2 ">Top Skills:{data?.topSkills?.join(', ')}</h3>
+                            <h3 className="font-semibold text-white mr-2 tracking-wide">Top Skills: {data?.topSkills?.join(',  ')}</h3>
                         </div>
                     </div>
                 </div>
